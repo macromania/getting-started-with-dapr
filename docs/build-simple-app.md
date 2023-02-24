@@ -113,3 +113,56 @@ Date: Fri, 24 Feb 2023 19:10:37 GMT
 Traceparent: 00-0adec51881207429def6009d09cf532d-3ca1eae3779edc3b-01
 ```
 
+## View State
+
+By querying state store below by `name` which was the state `key` in the previous setup, you will get the state of the application
+
+```sh
+http http://localhost:3500/v1.0/state/statestore/name
+```
+
+This should output similar to:
+
+```sh
+HTTP/1.1 200 OK
+Content-Length: 13
+Content-Type: application/json
+Date: Fri, 24 Feb 2023 19:31:33 GMT
+Etag: 1
+Traceparent: 00-aa514889960f0f4dfb0009d47d926110-6f70bdaf1c2bf950-01
+
+"Bruce Wayne"
+
+```
+
+## Delete State
+
+You can delete the state data by simply calling by key `name`:
+
+```sh
+http DELETE http://localhost:3500/v1.0/state/statestore/name
+```
+
+This should output similar to:
+
+```sh
+HTTP/1.1 204 No Content
+Content-Type: text/plain; charset=utf-8
+Date: Fri, 24 Feb 2023 19:32:45 GMT
+Traceparent: 00-8808b9427cac2d4d1b73946ee4a45ddd-534660d587754c24-01
+```
+
+To confirm the state is deleted, simply query the state store by key `name`:
+
+```sh
+http http://localhost:3500/v1.0/state/statestore/name
+```
+
+This should output similar to:
+
+```sh
+HTTP/1.1 204 No Content
+Content-Type: text/plain; charset=utf-8
+Date: Fri, 24 Feb 2023 19:33:27 GMT
+Traceparent: 00-13f7ace4cc273df3e69f44b2f590e0c0-0f09c6b691dab56d-01
+```
