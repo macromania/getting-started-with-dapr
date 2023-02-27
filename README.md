@@ -141,4 +141,6 @@ bin         components  config.yaml
 
 ## Next
 
-Now the local environment is setup, you can [build a simple Dapr Application](docs/build-simple-app.md).
+**Path 1:** Now the local environment is setup, you can [build a simple Dapr Application](docs/build-simple-app.md).
+
+**Path 2:** Alternatively, you can jump in to [build a more sophisticated application](banking-app.md).

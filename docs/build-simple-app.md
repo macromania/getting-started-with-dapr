@@ -166,3 +166,7 @@ Content-Type: text/plain; charset=utf-8
 Date: Fri, 24 Feb 2023 19:33:27 GMT
 Traceparent: 00-13f7ace4cc273df3e69f44b2f590e0c0-0f09c6b691dab56d-01
 ```
+
+## Next
+
+**Path 2:** Now you have built your first Dapr Application, let's [build a more sophisticated application](banking-app.md)
