@@ -118,7 +118,7 @@ Traceparent: 00-0adec51881207429def6009d09cf532d-3ca1eae3779edc3b-01
 By querying state store below by `name` which was the state `key` in the previous setup, you will get the state of the application
 
 ```sh
-http http://localhost:3500/v1.0/state/statestore/name
+http GET http://localhost:3500/v1.0/state/statestore/name
 ```
 
 This should output similar to:
