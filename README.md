@@ -139,4 +139,6 @@ This should output similar to:
 bin         components  config.yaml
 ```
 
+## Next
+
 Now the local environment is setup, you can [build a simple Dapr Application](docs/build-simple-app.md).
